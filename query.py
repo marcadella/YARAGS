@@ -8,7 +8,7 @@ import subprocess
 
 QUERY = "Auscultation is not reliable"
 N_CONTEXT = 5
-LOADING_ZOTERO = False
+LOADING_ZOTERO = True
 LLM_QUERY = True
 RESET = False
 MODEL = "phi3:mini"
@@ -32,7 +32,8 @@ if LOADING_ZOTERO:
         library_id=os.environ.get("ZOTERO_USER_ID"),
         library_type="user",
         api_key=os.environ.get("ZOTERO_API_KEY"),
-        local=False
+        local=False # Local API does not return annotations
+        # ATTENTION: if using the local API, you need to enable it in the advanced preferences in Zotero ('Allow other applications...')
     )
 
     annotations = zot.everything(zot.items(itemType="annotation"))

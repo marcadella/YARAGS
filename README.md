@@ -6,4 +6,8 @@ Fetch relevant annotations in zotero and use an LLM to generate some text based 
 
 Heavily inspired from https://medium.com/@emcf1/diy-ground-a-language-model-on-your-papers-from-zotero-with-finesse-a5c4ca7c187a
 
-Setup: `conda env create -f environment.yml`
+### Setup
+
+- `conda env create -f environment.yml`
+- Store Zotero API id and key in envirs `ZOTERO_USER_ID` and `ZOTERO_API_KEY`.
+
