@@ -8,7 +8,7 @@ import subprocess
 
 QUERY = "Auscultation is not reliable"
 N_CONTEXT = 5
-LOADING_ZOTERO = True
+LOADING_ZOTERO = False
 LLM_QUERY = True
 RESET = False
 MODEL = "phi3:mini"
@@ -16,7 +16,7 @@ MODEL = "phi3:mini"
 process = subprocess.Popen(["ollama", "run", MODEL])
 process.terminate()
 
-# setup Chroma in-memory, for easy prototyping. Can add persistence easily!
+# setup Chroma
 client = chromadb.PersistentClient(settings=Settings(allow_reset=True))
 if RESET:
     client.reset()
