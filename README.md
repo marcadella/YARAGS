@@ -9,5 +9,8 @@ Heavily inspired from https://medium.com/@emcf1/diy-ground-a-language-model-on-y
 ### Setup
 
 - `conda env create -f environment.yml`
-- Store Zotero API id and key in envirs `ZOTERO_USER_ID` and `ZOTERO_API_KEY`.
+- Export Zotero API id and key in envirs `ZOTERO_USER_ID` and `ZOTERO_API_KEY`.
+- Export Pushover API id and token in envirs `PUSHOVER_USER_KEY` and `PUSHOVER_API_TOKEN`.
+- Restart terminal
+- Start jupyter lab: `jupyter lab`
 
